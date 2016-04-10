@@ -1,0 +1,158 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "rest1": {
+    "name": "rest1",
+    "baseURL": "api/",
+    "options": {
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json"
+      },
+      "strictSSL": false
+    },
+    "operations": [
+      {
+        "template": {
+          "method": "GET",
+          "url": "apps/{id}",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "query": {
+            "v": "{v=100:number}",
+            "w": "{w=helloWorld:string}",
+            "x": "{x:boolean}",
+            "y": "{y}",
+            "z": "{z}"
+          },
+          "body": {
+            "a": "{a=100:number}",
+            "b": "{b=helloWorld:string}",
+            "c": "{c:boolean}",
+            "d": "{d}",
+            "e": "{e}"
+          },
+          "variables": {
+            "d": {
+              "description": "This is a boolean",
+              "type": "boolean"
+            },
+            "e": {
+              "description": "This is a complext type",
+              "type": [
+                "string"
+              ]
+            },
+            "y": {
+              "description": "This is a boolean",
+              "type": "boolean"
+            },
+            "z": {
+              "description": "This is a complext type",
+              "type": [
+                "string"
+              ]
+            }
+          }
+        },
+        "functions": {
+          "apps": [
+            "id",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"
+          ]
+        }
+      }
+    ],
+    "crud": false,
+    "connector": "rest"
+  },
+  "rest2": {
+    "name": "rest2",
+    "baseURL": "api/",
+    "options": {
+      "headers": {
+        "accept": "application/json",
+        "content-type": "application/json"
+      },
+      "strictSSL": false
+    },
+    "operations": [
+      {
+        "template": {
+          "method": "GET",
+          "url": "apps/{id}",
+          "headers": {
+            "accepts": "application/json",
+            "content-type": "application/json"
+          },
+          "query": {
+            "v": "{v=100:number}",
+            "w": "{w=helloWorld:string}",
+            "x": "{x:boolean}",
+            "y": "{y}",
+            "z": "{z}"
+          },
+          "body": {
+            "a": "{a=100:number}",
+            "b": "{b=helloWorld:string}",
+            "c": "{c:any}",
+            "d": "{d}",
+            "e": "{e}"
+          },
+          "variables": {
+            "d": {
+              "description": "This is a boolean",
+              "type": "object"
+            },
+            "e": {
+              "description": "This is a complext type",
+              "type": [
+                "string"
+              ]
+            },
+            "y": {
+              "description": "This is a boolean",
+              "type": "boolean"
+            },
+            "z": {
+              "description": "This is a complext type",
+              "type": [
+                "string"
+              ]
+            }
+          }
+        },
+        "functions": {
+          "apps": [
+            "id",
+            "a",
+            "b",
+            "c",
+            "d",
+            "e",
+            "v",
+            "w",
+            "x",
+            "y",
+            "z"
+          ]
+        }
+      }
+    ],
+    "crud": false,
+    "connector": "rest"
+  }
+}
